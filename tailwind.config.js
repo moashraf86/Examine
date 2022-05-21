@@ -27,14 +27,14 @@ module.exports = {
       },
       boxShadow: {
         'innerShadow' : 'inset 0 0 18px -4px rgba(0,0,0,.15)',
+        'header'   : '0px 2px 6px 0px rgba(0,0,0,.08)',
+        'card'   : '0px 2px 12px 0px rgba(0,0,0,.08)',
       },
     },
     container: {
       center : true,
       padding : '24px'
-    }
-
-    
+    },
   },
   plugins: [],
 }
