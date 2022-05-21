@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link href="./dist/output.css" rel="stylesheet">
-  <title>Signup</title>
+  <title>Login</title>
 </head>
 <body class="font-inter font-normal">
   <!-- Start Header -->
@@ -42,9 +42,9 @@
     <div class="flex items-center justify-between">
       <!-- Sign & Login buttons -->
       <ul id="navbar" class="hidden md:flex gap-6">
-        <li class="inline-flex items-center"><a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">Login</a></li>
+        <li class="inline-flex items-center"><a href="#" class="text-[15px] font-normal text-dark tracking-tight">Login</a></li>
         <li class="inline-flex items-center">
-          <a href="#" class="bg-premium text-purple font-bold text-[16px] px-[20px] py-3 leading-6 rounded-full">
+          <a href="./signup.html" class="bg-premium text-purple font-bold text-[16px] px-[20px] py-3 leading-6 rounded-full">
             SignUp
           </a>
         </li>
@@ -65,8 +65,8 @@
       <!-- Signup Form wrapper -->
       <div class="flex justify-center items-center">
         <div class="w-full sm:max-w-[650px] text-center p-6 sm:p-[75px] bg-white sm:rounded-[30px] sm:drop-shadow-md">
-          <h2 class="text-[25px] leading-5 sm:leading-[55px] sm:text-[40px] mb-2">Create your account</h2>
-          <p>It’s Includes a free 2 week trial!</p>
+          <h2 class="text-[25px] leading-5 sm:leading-[55px] sm:text-[40px] mb-2">Welcome back! 👋</h2>
+          <p>Let's build someting great</p>
           <!-- Social Icons -->
           <ul class="flex items-center justify-center gap-4 mb-6 mt-6 md:mt-10">
             <li class="inline-flex">
@@ -85,16 +85,24 @@
               </a>
             </li>
           </ul>
+          <!-- Separator -->
           <span class="block relative before:absolute before:content-[''] before:left-0 before:top-[50%] before:w-[45%] before:h-[1px] before:bg-border-light after:absolute after:content-[''] after:right-0 after:top-[50%] after:w-[45%] after:h-[1px] after:bg-border-light">OR</span>
+          <!-- Separator -->
           <form class="mt-6">
-            <input class="w-full py-2 px-4 border border-gray-400 rounded-md mb-4 md:mb-6 placeholder-tertiary" type="text" name="firstname" placeholder="First Name">
             <input class="w-full py-2 px-4 border border-gray-400 rounded-md mb-4 md:mb-6 placeholder-tertiary" type="email" name="email" placeholder="Email">
             <div class="relative mb-4 md:mb-6">
               <input class="w-full h-ful py-2 px-4 border border-gray-400 rounded-md  placeholder-tertiary" type="password" name="password" placeholder="Password">
               <span class="text-purple text-[13px] font-bold cursor-pointer absolute top-[50%] mt-[-10px] right-4">show</span>
             </div>
-            <button type="submit" class="w-full bg-purple text-white text-[16px] md:text-xl py-2 md:py-4 rounded-md">Start your 2-week free trial!</button>
+            <button type="submit" class="w-full bg-purple text-white text-[16px] md:text-xl py-2 md:py-4 rounded-md mb-4 md:mb-6">Login</button>
           </form>
+          <!-- Note -->
+          <div class="bg-green-500/10 py-4 px-5 md:px-11 rounded-md border border-dashed border-green-500">
+            <p class="text-green-700 text-sm leading-6">
+              <span class="font-lora text-lg font-medium">Click Here</span> <br>
+              to sign up for the complete Examine Membership. Includes a free 2 week trial!
+            </p>
+          </div>
         </div>
       </div>
     </div>
