@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link href="./dist/output.css" rel="stylesheet">
+  <title>Signup</title>
+</head>
+<body class="font-inter font-normal">
+  <!-- Start Header -->
+  <header id="header" class="flex items-center justify-end md:justify-between flex-row-reverse md:flex-row h-[58px] md:h-[90px] px-3 md:px-10 bg-purple md:bg-white drop-shadow-md">
+    <!-- Mobile Search Icon -->
+      <div class="flex-grow md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-auto" fill="transparent" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+    <!-- logo -->
+    <div class="h-4 md:h-auto">
+      <img class="brightness-[10] md:brightness-[] h-full" src="./dist/images/examine_logo.svg" alt="Logo">
+    </div>
+    <!-- Search form -->
+    <div class="bg-light-200 h-full items-center w-1/2 px-10 shadow-innerShadow hidden md:flex">
+      <form action="" class="w-full">
+        <div class="flex items-center gap-3">
+          <!-- search icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="transparent" viewBox="0 0 24 24" stroke="purple" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <!-- Input -->
+          <input class="bg-transparent border-0 w-full max-w-[420px] focus-visible:outline-none border-b border-purple-200 focus-visible:border-purple placeholder-purple" type="search" name="search" id="search" autocomplete="true" placeholder="What do you want to learn about?">
+        </div>
+      </form>
+    </div>
+    <!-- Navbar -->
+    <div class="flex items-center justify-between">
+      <!-- Sign & Login buttons -->
+      <ul id="navbar" class="hidden md:flex gap-6">
+        <li class="inline-flex items-center"><a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">Login</a></li>
+        <li class="inline-flex items-center">
+          <a href="#" class="bg-premium text-purple font-bold text-[16px] px-[20px] py-3 leading-6 rounded-full">
+            SignUp
+          </a>
+        </li>
+      </ul>
+      <!-- Menu Togler -->
+      <div id="menu-toggler" class="cursor-pointer mr-2 md:ml-6 bg-purple-400 rounded-md text-white p-1 md:bg-transparent md:text-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Start Main -->
+  <main class="sm:pt-[110px] sm:pb-[240px] h-[100vh]">
+    <div class="container">
+      <!-- Signup Form wrapper -->
+      <div class="flex justify-center items-center">
+        <div class="w-full sm:max-w-[650px] text-center p-6 sm:p-[75px] bg-white sm:rounded-[30px] sm:drop-shadow-md">
+          <h2 class="text-[25px] leading-5 sm:leading-[55px] sm:text-[40px] mb-2">Create your account</h2>
+          <p>It’s Includes a free 2 week trial!</p>
+          <!-- Social Icons -->
+          <ul class="flex items-center justify-center gap-4 mb-6 mt-6 md:mt-10">
+            <li class="inline-flex">
+              <a href="#" class="px-5 py-4 rounded-lg bg-white drop-shadow-md">
+                <img class="w-[24px]" src="./dist/images/google.svg" alt="Google">
+              </a>
+            </li>
+            <li class="inline-flex">
+              <a href="#" class="px-5 py-4 rounded-lg bg-white drop-shadow-md">
+                <img class="w-[24px]" src="./dist/images/apple.svg" alt="Apple">
+              </a>
+            </li>
+            <li class="inline-flex">
+              <a href="#" class="px-5 py-4 rounded-lg bg-white drop-shadow-md">
+                <img class="w-[24px]" src="./dist/images/facebook.svg" alt="Facebook">
+              </a>
+            </li>
+          </ul>
+          <span class="block relative before:absolute before:content-[''] before:left-0 before:top-[50%] before:w-[45%] before:h-[1px] before:bg-border-light after:absolute after:content-[''] after:right-0 after:top-[50%] after:w-[45%] after:h-[1px] after:bg-border-light">OR</span>
+          <form class="mt-6">
+            <input class="w-full py-2 px-4 border border-gray-400 rounded-md mb-4 md:mb-6 placeholder-tertiary" type="text" name="firstname" placeholder="First Name">
+            <input class="w-full py-2 px-4 border border-gray-400 rounded-md mb-4 md:mb-6 placeholder-tertiary" type="email" name="email" placeholder="Email">
+            <div class="relative mb-4 md:mb-6">
+              <input class="w-full h-ful py-2 px-4 border border-gray-400 rounded-md  placeholder-tertiary" type="password" name="password" placeholder="Password">
+              <span class="text-purple text-[13px] font-bold cursor-pointer absolute top-[50%] mt-[-10px] right-4">show</span>
+            </div>
+            <button type="submit" class="w-full bg-purple text-white text-[16px] md:text-xl py-2 md:py-4 rounded-md">Start your 2-week free trial!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- End Main -->
+
+  <!-- Start Footer -->
+  <!-- End Footer -->
+</body>
+</html>

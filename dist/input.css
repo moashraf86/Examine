@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+h2 {
+  @apply text-dark font-medium font-lora
+}
+
+p {
+  @apply text-tertiary
+}
+
+input {
+  @apply focus-visible:outline-none
+}
+
+header input::placeholder { 
+  @apply text-lg 
+}
