@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Global Styles */
-h2 {
+h2,h3,h4 {
   @apply text-dark font-medium font-lora
 }
 
