@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link href="./dist/output.css" rel="stylesheet">
-  <title>Signup page</title>
+  <title>Sign Up page</title>
 </head>
 <body class="font-inter font-normal">
   <!-- Start Header -->
-  <header id="header" class="flex items-center justify-end md:justify-between flex-row-reverse md:flex-row h-[58px] md:h-[90px] px-3 md:px-10 bg-purple md:bg-white shadow-header">
+  <header id="header" class="fixed top-0 right-0 left-0 z-50 flex gap-5 2xl:gap-40 items-center justify-end md:justify-start flex-row-reverse md:flex-row h-[58px] md:h-[90px] px-3 md:px-10 bg-purple md:bg-white shadow-header">
     <!-- Mobile Search Icon -->
       <div class="flex-grow md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-auto" fill="transparent" viewBox="0 0 24 24" stroke="white" stroke-width="2">
@@ -23,10 +23,10 @@
       </div>
     <!-- logo -->
     <div class="h-4 md:h-auto">
-      <img class="brightness-[10] md:brightness-[] h-full" src="./dist/images/examine_logo.svg" alt="Logo">
+      <img class="brightness-[10] md:brightness-[] h-full md:min-w-[140px]" src="./dist/images/examine_logo.svg" alt="Logo">
     </div>
     <!-- Search form -->
-    <div class="bg-light-200 h-full items-center w-1/2 px-10 shadow-innerShadow hidden md:flex">
+    <div id="header-search" class="bg-light-200 h-full items-center w-1/2 px-10 shadow-innerShadow hidden xl:flex m-auto 2xl:m-0 transition-[width] duration-300">
       <form action="" class="w-full">
         <div class="flex items-center gap-3">
           <!-- search icon -->
@@ -39,29 +39,73 @@
       </form>
     </div>
     <!-- Navbar -->
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between ml-auto">
       <!-- Sign & Login buttons -->
-      <ul id="navbar" class="hidden md:flex gap-6">
-        <li class="inline-flex items-center"><a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">Login</a></li>
-        <li class="inline-flex items-center">
+      <ul class="hidden lg:flex gap-6 mr-6">
+        <li class="inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+            Login
+          </a>
+        </li>
+        <li class="inline-flex items-center min-w-max">
           <a href="#" class="bg-premium text-purple font-bold text-[16px] px-[20px] py-3 leading-6 rounded-full">
-            SignUp
+            Sign Up
+          </a>
+        </li>
+      </ul>
+      <ul id="navbar" class="hidden lg:flex gap-6 ml- justify-evenly  duration-300 ease-linear collapsed">
+        <li class="inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+            Categories
+          </a>
+        </li>
+        <li class="inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+            Conditions
+          </a>
+        </li>
+        <li class="inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+            Interventions
+          </a>
+        </li>
+        <li class="inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+            Outcomes
+          </a>
+        </li>
+        <li class=" :inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+            Membership
+          </a>
+        </li>
+        <li class="hidden xl:inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+            About Us
+          </a>
+        </li>
+        <li id="search-icon" class="items-center min-w-max hidden">
+          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+            <!-- search icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="transparent" viewBox="0 0 24 24" stroke="#212529" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
           </a>
         </li>
       </ul>
       <!-- Menu Togler -->
-      <div id="menu-toggler" class="cursor-pointer mr-2 md:ml-6 bg-purple-400 rounded-md text-white p-1 md:bg-transparent md:text-dark">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
+      <div id="menu-toggler" class="relative h-[30px] w-[30px] cursor-pointer mr-2 md:ml-0 bg-purple-400 rounded-md text-white p-[5px] md:bg-transparent md:text-dark">
+        <span class="top left-[5px]   absolute w-[20px] h-[2px] top-[30%] transition-all duration-300 bg-white md:bg-dark"></span>
+        <span class="middle left-[5px] absolute w-[20px] h-[2px] top-[50%] transition-all duration-300 bg-white  md:bg-black"></span>
+        <span class="bottom let-[5px] absolute w-[20px] h-[2px] top-[71%] transition-all duration-300 bg-white  md:bg-black"></span>
       </div>
     </div>
   </header>
   <!-- End Header -->
 
   <!-- Start Main -->
-  <main class="sm:pt-[110px] sm:pb-[240px] h-[100vh] md:h-auto">
-    <div class="container">
+  <main class="pt-[90px] sm:pt-[195px] sm:pb-[240px] h-[100vh] md:h-auto">
+    <div class="container max-w-7xl">
       <!-- Signup Form wrapper -->
       <div class="flex justify-center items-center">
         <div class="w-full sm:max-w-[650px] text-center py-6 px-0 sm:p-[75px] bg-white sm:rounded-[30px] sm:shadow-card">
@@ -86,14 +130,14 @@
             </li>
           </ul>
           <span class="block relative before:absolute before:content-[''] before:left-0 before:top-[50%] before:w-[45%] before:h-[1px] before:bg-border-light after:absolute after:content-[''] after:right-0 after:top-[50%] after:w-[45%] after:h-[1px] after:bg-border-light">OR</span>
-          <form class="mt-6">
-            <input class="w-full py-2 px-4 border border-gray-400 rounded-md mb-4 md:mb-6 placeholder-tertiary" type="text" name="firstname" placeholder="First Name">
-            <input class="w-full py-2 px-4 border border-gray-400 rounded-md mb-4 md:mb-6 placeholder-tertiary" type="email" name="email" placeholder="Email">
+          <form id="sign-up" class="mt-6">
+            <input class="w-full py-2 md:py-[10px] px-4 border border-gray-400 rounded-md mb-4 md:mb-6 placeholder-tertiary" type="text" name="firstname" placeholder="First Name">
+            <input class="w-full py-2 md:py-[10px] px-4 border border-gray-400 rounded-md mb-4 md:mb-6 placeholder-tertiary" type="email" name="email" placeholder="Email">
             <div class="relative mb-4 md:mb-6">
-              <input class="w-full h-ful py-2 px-4 border border-gray-400 rounded-md  placeholder-tertiary" type="password" name="password" placeholder="Password">
-              <span class="text-purple text-[13px] font-bold cursor-pointer absolute top-[50%] mt-[-10px] right-4">show</span>
+              <input class="w-full h-ful py-[10px] px-4 border border-gray-400 rounded-md  placeholder-tertiary" type="password" name="password" placeholder="Password">
+              <span class="text-purple text-[13px] font-bold cursor-pointer absolute top-[50%] mt-[-10px] right-4 uppercase">show</span>
             </div>
-            <button type="submit" class="w-full bg-purple text-white text-[16px] md:text-xl py-2 md:py-4 rounded-md">Start your 2-week free trial!</button>
+            <button type="submit" class="w-full bg-purple text-white text-[16px] md:text-xl py-2 md:py-[10px] lg:py-4 rounded-md">Start your 2-week free trial!</button>
           </form>
         </div>
       </div>
@@ -103,7 +147,7 @@
 
   <!-- Start Footer -->
   <footer class="pt-10 md:pt-[85px] bg-purple">
-    <div class="container">
+    <div class="container 2xl:max-w-7xl">
       <div class="lg:flex justify-between items-center ">
         <!-- col-4 -->
         <div class="lg:w-4/12 mb-16 lg:mb-0">
@@ -113,9 +157,9 @@
           </div>
           <h3 class="text-xl md:text-[30px] text-white mb-4">Never miss an update!</h3>
           <p class="text-info text-[16px] md:text-lg leading-7 mb-5">We are always updating our research and adding new stuff. Sign-up and always stay on top of our updates!</p>
-          <form class="flex items-center px-5 border border-info rounded-full">
-            <input class="py-6 bg-transparent placeholder-white text-white w-[90%]" type="email" name="email" placeholder="Your Email Address">
-            <button type="submit" class="text-purple bg-info w-12 h-12 rounded-full rotate-45">
+          <form class="flex items-center justify-between px-5 border border-info rounded-full">
+            <input class="py-4 md:py-[22px] bg-transparent placeholder-white text-white w-[90%]" type="email" name="email" placeholder="Your Email Address">
+            <button type="submit" class="text-purple bg-info w-10 h-10 md:w-12 md:h-12 rounded-full rotate-45">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 m-auto -mt-1" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
               </svg>
@@ -128,10 +172,10 @@
           <div class="mb-7 sm:mb-0">
             <h4 class="text-white text-lg md:text-[25px] mb-4 md:mb-6">About Us</h4>
             <ul>
-              <li class="mb-4 md:mb-6">
+              <li class="mb-4 md:mb-7">
                 <a href="#" class="text-info text-sm md:text-lg">Our Story</a>
               </li>
-              <li class="mb-4 md:mb-6">
+              <li class="mb-4 md:mb-7">
                 <a href="#" class="text-info text-sm md:text-lg">Our Editorial Policy</a>
               </li>
               <li class="">
@@ -143,13 +187,13 @@
           <div class="mb-7 sm:mb-0">
             <h4 class="text-white text-lg md:text-[25px] mb-4 md:mb-6">Resources</h4>
             <ul>
-              <li class="mb-4 md:mb-6">
+              <li class="mb-4 md:mb-7">
                 <a href="#" class="text-info text-sm md:text-lg">Continuing Education</a>
               </li>
-              <li class="mb-4 md:mb-6">
+              <li class="mb-4 md:mb-7">
                 <a href="#" class="text-info text-sm md:text-lg">For Journalists</a>
               </li>
-              <li class="mb-4 md:mb-6">
+              <li class="mb-4 md:mb-7">
                 <a href="#" class="text-info text-sm md:text-lg">Student Discount</a>
               </li>
               <li class="">
@@ -161,13 +205,13 @@
           <div>
             <h4 class="text-white text-lg md:text-[25px] mb-4 md:mb-6">Social</h4>
             <ul>
-              <li class="mb-4 md:mb-6">
+              <li class="mb-4 md:mb-7">
                 <a href="#" class="text-info text-sm md:text-lg">Facebook</a>
               </li>
-              <li class="mb-4 md:mb-6">
+              <li class="mb-4 md:mb-7">
                 <a href="#" class="text-info text-sm md:text-lg">Twitter</a>
               </li>
-              <li class="mb-4 md:mb-6">
+              <li class="mb-4 md:mb-7">
                 <a href="#" class="text-info text-sm md:text-lg">Linkedin</a>
               </li>
               <li class="">
@@ -185,5 +229,8 @@
     </div>
   </footer>
   <!-- End Footer -->
+
+  <!-- Custom Vanilla JS -->
+  <script src="./dist/main.js"></script>
 </body>
 </html>

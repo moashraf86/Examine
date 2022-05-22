@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 /* Global Styles */
+@media screen and (min-width:1536px) {
+  .container {
+    max-width: 1280px !important;
+  }
+}
+
 h2,h3,h4 {
   @apply text-dark font-medium font-lora
 }
@@ -16,5 +22,55 @@ input {
 }
 
 header input::placeholder { 
-  @apply text-lg 
+  @apply text-lg
+}
+
+#sign-up input::placeholder,
+#login input::placeholder { 
+  @apply md:text-[20px]
+}
+
+/* Header Navigation links*/
+
+#menu-toggler.active span.top {
+  @apply rotate-45 top-[50%]
+}
+
+#menu-toggler.active span.middle,
+#menu-toggler.active span.bottom {
+  @apply -rotate-45 top-[50%]
+}
+
+ul#navbar {
+  transition-property: width, opacity;
+  width: 620px;
+  opacity: 1;
+  z-index: 0;
+}
+
+ul.collapsed {
+  width: 0 !important;
+  opacity: 0 !important;
+  z-index: -1 !important;
+}
+
+
+
+@media  screen and (max-width: 1360px) {
+  #header-search {
+    @apply hidden
+  }
+
+  #search-icon {
+    @apply block
+  }
+}
+
+@media screen and (max-width:1024px) {
+  ul#navbar {
+  width: 500px;
+  }
+}
+#header-search.collapsed {
+  @apply w-[30%]
 }
