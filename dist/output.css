@@ -1516,6 +1516,14 @@ ul#navbar {
     width: 3rem;
   }
 
+  .md\:w-\[72px\] {
+    width: 72px;
+  }
+
+  .md\:w-\[140px\] {
+    width: 140px;
+  }
+
   .md\:min-w-\[140px\] {
     min-width: 140px;
   }
@@ -1574,6 +1582,21 @@ ul#navbar {
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .md\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .md\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
   .md\:pt-\[85px\] {

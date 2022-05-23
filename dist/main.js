@@ -22,6 +22,7 @@ document.querySelector('#menu-toggler').addEventListener('click', function () {
   document.querySelector('#menu-toggler').classList.toggle('active');
   if(this.classList.contains('mobile')) {
     document.querySelector('#menu').classList.remove('collapsed');
+    document.querySelector('#menu-toggler').classList.remove('active');
     document.querySelector('body').classList.add('overflow-y-hidden')
   } else {
     document.querySelector('ul#navbar').classList.toggle('collapsed');
