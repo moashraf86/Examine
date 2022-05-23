@@ -1496,6 +1496,10 @@ ul#navbar {
     margin-top: 85px;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -1770,6 +1774,10 @@ ul#navbar {
 
   .xl\:inline-flex {
     display: inline-flex;
+  }
+
+  .xl\:hidden {
+    display: none;
   }
 }
 
