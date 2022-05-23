@@ -31,6 +31,9 @@ header input::placeholder {
 }
 
 /* Header Navigation links*/
+#header-search.collapsed {
+  @apply w-[30%]
+}
 
 #menu-toggler.active span.top {
   @apply rotate-45 top-[50%]
@@ -43,34 +46,31 @@ header input::placeholder {
 
 ul#navbar {
   transition-property: width, opacity;
-  width: 620px;
-  opacity: 1;
-  z-index: 0;
+  @apply  w-[620px] opacity-100 z-0;
 }
 
-ul.collapsed {
+@media screen and (min-width: 1024px) {
+  ul.collapsed {
   width: 0 !important;
   opacity: 0 !important;
   z-index: -1 !important;
+  pointer-events: none;
+  }
 }
-
-
 
 @media  screen and (max-width: 1360px) {
   #header-search {
     @apply hidden
   }
-
-  #search-icon {
-    @apply block
-  }
 }
 
 @media screen and (max-width:1024px) {
   ul#navbar {
-  width: 500px;
+    @apply w-[500px];
   }
-}
-#header-search.collapsed {
-  @apply w-[30%]
+
+  #menu.collapsed {
+    @apply opacity-0 -z-10 h-0 p-0 overflow-hidden
+  }
+
 }

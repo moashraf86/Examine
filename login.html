@@ -14,7 +14,7 @@
 </head>
 <body class="font-inter font-normal">
   <!-- Start Header -->
-  <header id="header" class="fixed top-0 right-0 left-0 z-50 flex gap-5 2xl:gap-40 items-center justify-end md:justify-start flex-row-reverse md:flex-row h-[58px] md:h-[90px] px-3 md:px-10 bg-purple md:bg-white shadow-header">
+  <header id="header" class="fixed top-0 right-0 left-0 z-50 flex gap-5 items-center justify-end md:justify-start flex-row-reverse md:flex-row h-[58px] md:h-[90px] px-3 md:px-10 bg-purple md:bg-white shadow-header">
     <!-- Mobile Search Icon -->
       <div class="flex-grow md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-auto" fill="transparent" viewBox="0 0 24 24" stroke="white" stroke-width="2">
@@ -26,11 +26,11 @@
       <img class="brightness-[10] md:brightness-[] h-full md:min-w-[140px]" src="./dist/images/examine_logo.svg" alt="Logo">
     </div>
     <!-- Search form -->
-    <div id="header-search" class="bg-light-200 h-full items-center w-[55%] px-10 shadow-innerShadow hidden xl:flex m-auto 2xl:m-0 transition-[width] duration-300">
+    <div id="header-search" class="bg-light-200 h-full items-center w-[55%] px-10 shadow-innerShadow hidden xl:flex m-auto 2xl:m-0 transition-[width] duration-300 2xl:ml-40">
       <form action="" class="w-full">
         <div class="flex items-center gap-3">
           <!-- search icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 min-w-[24px]" fill="transparent" viewBox="0 0 24 24" stroke="purple" stroke-width="2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 min-w-[24px] " fill="transparent" viewBox="0 0 24 24" stroke="purple" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <!-- Input -->
@@ -41,50 +41,62 @@
     <!-- Navbar -->
     <div class="flex items-center justify-between ml-auto">
       <!-- Sign & Login buttons -->
-      <ul class="hidden lg:flex gap-6 mr-6">
-        <li class="inline-flex items-center min-w-max">
-          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+      <div id="menu" class="nav-wrapper collapsed p-5 md:p-10 lg:p-0  flex flex-col lg:flex-row justify-start lg:justify-between lg:items-center fixed lg:relative top-0 right-0 bottom-0 left-0 bg-white z-9999  transition-opacity duration-300 ease-out overflow-y-auto overflow-x-hidden">
+        <!-- Mobile toggler & logo -->
+          <div class="flex lg:hidden items-center justify-between w-full mb-5">
+            <img class="w-[72px]" src="./dist/images/examine_logo.svg" alt="Logo">
+            <!-- close icon -->
+            <div id="menu-close" class="cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+          </div>
+        <!-- Mobile toggler & logo -->
+        <ul class="flex w-full lg:max-w-[10rem] justify-between lg:justify-start gap-4 lg:gap-6 m-0 lg:mr-6 mb-8 lg:mb-0">
+        <li class="inline-flex items-center min-w-max bg-info hover:bg-light lg:hover:bg-transparent border hover:border-gray-200 lg:border-none lg:bg-inherit text-center rounded-full lg:rounded-none w-1/2 lg:w-auto h-[38px] sm:h-auto cursor-pointer">
+          <a href="./login.html" class="text-xl lg:text-[15px] font-normal text-purple lg:text-dark tracking-tight m-auto lg:m-0">
             Login
           </a>
         </li>
-        <li class="inline-flex items-center min-w-max">
-          <a href="./signup.html" class="bg-premium text-purple font-bold text-[16px] px-[20px] py-3 leading-6 rounded-full">
+        <li class="inline-flex items-center min-w-max bg-purple hover:bg-purple-hover lg:hover:bg-transparent lg:bg-inherit text-center rounded-full lg:rounded-none w-1/2 lg:w-auto h-[38px] sm:h-auto cursor-pointer">
+          <a href="./signup.html" class="lg:bg-premium text-white lg:text-purple lg:font-bold text-xl lg:text-[16px] px-[20px] sm:py-3 leading-6 rounded-full m-auto lg:m-0">
             Sign Up
           </a>
         </li>
       </ul>
-      <ul id="navbar" class="hidden lg:flex gap-6 ml- justify-evenly  duration-300 ease-linear collapsed">
+      <ul id="navbar" class="flex gap-6 flex-col lg:flex-row lg:items-center justify-evenly duration-300 ease-linear collapsed">
         <li class="inline-flex items-center min-w-max">
-          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+          <a href="./login.html" class="text-lg lg:text-[15px] font-normal text-dark tracking-tight">
             Categories
           </a>
         </li>
         <li class="inline-flex items-center min-w-max">
-          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+          <a href="./login.html" class="text-lg lg:text-[15px] font-normal text-dark tracking-tight">
             Conditions
           </a>
         </li>
         <li class="inline-flex items-center min-w-max">
-          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+          <a href="./login.html" class="text-lg lg:text-[15px] font-normal text-dark tracking-tight">
             Interventions
           </a>
         </li>
         <li class="inline-flex items-center min-w-max">
-          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+          <a href="./login.html" class="text-lg lg:text-[15px] font-normal text-dark tracking-tight">
             Outcomes
           </a>
         </li>
-        <li class=" :inline-flex items-center min-w-max">
-          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+        <li class="inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-lg lg:text-[15px] font-normal text-dark tracking-tight">
             Membership
           </a>
         </li>
-        <li class="hidden xl:inline-flex items-center min-w-max">
-          <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
+        <li class="lg:hidden xl:inline-flex items-center min-w-max">
+          <a href="./login.html" class="text-lg lg:text-[15px] font-normal text-dark tracking-tight">
             About Us
           </a>
         </li>
-        <li id="search-icon" class="items-center min-w-max hidden">
+        <li id="search-icon" class="items-center min-w-max hidden lg:block">
           <a href="./login.html" class="text-[15px] font-normal text-dark tracking-tight">
             <!-- search icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="transparent" viewBox="0 0 24 24" stroke="#212529" stroke-width="2">
@@ -93,8 +105,9 @@
           </a>
         </li>
       </ul>
+      </div>
       <!-- Menu Togler -->
-      <div id="menu-toggler" class="relative h-[30px] w-[30px] cursor-pointer mr-2 md:ml-0 bg-purple-400 rounded-md text-white p-[5px] md:bg-transparent md:text-dark">
+      <div id="menu-toggler" class="mobile desktop relative h-[30px] w-[30px] cursor-pointer mr-2  md:mr-0 md:ml-2 bg-purple-400 rounded-md text-white p-[5px] md:bg-transparent md:text-dark">
         <span class="top left-[5px]   absolute w-[20px] h-[2px] top-[30%] transition-all duration-300 bg-white md:bg-dark"></span>
         <span class="middle left-[5px] absolute w-[20px] h-[2px] top-[50%] transition-all duration-300 bg-white  md:bg-black"></span>
         <span class="bottom let-[5px] absolute w-[20px] h-[2px] top-[71%] transition-all duration-300 bg-white  md:bg-black"></span>

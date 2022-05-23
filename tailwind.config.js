@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
       'purple'       : '#5E3B76',
+      'purple-hover' : '#8C68CD',
       'purple-400'   : '#826595',
       'purple-200'   : '#C9BDD2',
       'green-500'    : '#25A1AF',
@@ -19,7 +20,8 @@ module.exports = {
       'dark'         : '#212529',
       'white'        : '#FFFFFF',
       'transparent'  : 'transparent',
-      'gray-400'     : '#CED4DA'
+      'gray-200'     : '#E9ECEF',
+      'gray-400'     : '#CED4DA',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
@@ -30,6 +32,9 @@ module.exports = {
         'header'   : '0px 2px 6px 0px rgba(0,0,0,.08)',
         'card'   : '0px 2px 12px 0px rgba(0,0,0,.08)',
       },
+      zIndex: {
+        '9999': '9999'
+      }
     },
     container: {
       center : true,
